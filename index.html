@@ -1,0 +1,193 @@
+<!doctype html>
+<!--
+  Portfolio - single-file static site
+  Instructions:
+  - Replace the placeholder logo at "assets/logo.png" with your logo file (same name) or update the path in the <img> tag.
+  - Put a downloadable CV at "assets/CV.pdf" if you want the "Télécharger le CV" button to work.
+  - This is plain HTML/CSS/JS (no build step). Open this file in a browser to preview.
+
+  Design notes:
+  - Mix of modern / minimal / slightly dynamic (subtle animation)
+  - Limited color palette. Edit :root variables to customize colors.
+-->
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ton Nom — Portfolio</title>
+  <meta name="description" content="Portfolio de Ton Nom — développeur / designer" />
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <!-- Replace the path below with your logo file. Recommended: assets/logo.png (transparent PNG) -->
+        <img src="logop.jpeg" alt="Logo" id="logoImg" onerror="this.style.display='none'" />
+        <div>
+          <h1>KINTOSSOU Duc-Martin</h1>
+          <div class="small muted">Développeur • Motion Designer • Créateur</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="accueil" class="hero">
+        <div class="intro card fade">
+          <h2>Bonjour — je suis <span style="color:var(--accent)">KINTOSSOU Duc-Martin</span></h2>
+          <p class="lead">Je crée des expériences web élégantes et performantes. J'allie design minimal et interactions subtiles. Voici quelques projets et compétences.</p>
+
+          <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">After Effects</div>
+            <div class="skill">Git</div>
+          </div>
+
+          <div style="margin-top:18px" class="cta">
+            <a class="btn" href="#projets">Voir mes projets</a>
+            <a class="btn outline" href="assets/CV.pdf" download>Télécharger le CV</a>
+          </div>
+        </div>
+
+        <aside class="card fade" style="padding:18px;align-self:start">
+          <h3 style="margin-top:0">Contact rapide</h3>
+          <p class="muted small">Disponible pour missions, freelance ou collaboration.</p>
+          <div style="margin-top:12px">
+            <div class="small muted">Email</div>
+            <div style="font-weight:700">ducmartink@firstafriquetv.bj</div>
+            <div style="height:14px"></div>
+            <div class="small muted">Localisation</div>
+            <div>Bénin — Cotonou</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="competences">
+        <h2>Compétences</h2>
+        <div class="grid" style="margin-top:12px">
+          <div class="project card fade">
+            <h3>Frontend</h3>
+            <p class="muted">HTML5, CSS3, JavaScript</p>
+          </div>
+          <div class="project card fade">
+            <h3>Backend</h3>
+            <p class="muted">pyton, php, java, mySQL</p>
+          </div>
+          <div class="project card fade">
+            <h3>Interactions</h3>
+            <p class="muted">Animations CSS, micro-interactions, transitions JS légères</p>
+          </div>
+          <div class="project card fade">
+            <h3>Outils</h3>
+            <p class="muted">Git, VSCode, After Effects</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projets">
+        <h2>Projets</h2>
+        <div class="grid" style="margin-top:12px">
+          <!-- Example project items. Replace images with your screenshots in assets/projects/ -->
+          <div class="project fade">
+            <img src="assets/projects/proj1.jpg" alt="Project 1" onerror="this.style.opacity=0.4"/>
+            <h3>Projet 1 — Site vitrine</h3>
+            <p class="muted">Conception et intégration d'un site vitrine pour une PME.</p>
+            <div style="margin-top:auto">
+              <a href="#" class="small">Détails</a>
+            </div>
+          </div>
+
+          <div class="project fade">
+            <img src="assets/projects/proj2.jpg" alt="Project 2" onerror="this.style.opacity=0.4"/>
+            <h3>Projet 2 — Application</h3>
+            <p class="muted">Prototype interactif en java.</p>
+            <div style="margin-top:auto"><a href="#" class="small">Détails</a></div>
+          </div>
+
+          <div class="project fade">
+            <img src="112.jpeg" alt="Project 3" onerror="this.style.opacity=0.4"/>
+            <h3>Projet 3 — Animation logo</h3>
+            <p class="muted">Animation et export pour diffusion TV / réseaux.</p>
+            <div style="margin-top:auto"><a href="#" class="small">Détails</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="a-propos" class="two-col">
+        <div class="card fade">
+          <h2>À propos</h2>
+          <p class="muted">Je suis développeur mais aussi passionné par le design et l'animation. J'aime transformer des idées en expériences claires et plaisantes. J'ai travaillé sur des sites vitrines, des prototypes interactifs et la création d'identités visuelles animées. Je donne vie à vas idées à travers des annimations, je fais de l'annimation logo, spot publicitaires ou encore des jingles.</p>
+
+          <h3 style="margin-top:18px">Processus</h3>
+          <ul class="muted">
+            <li>Découverte & brief</li>
+            <li>Prototypage</li>
+            <li>Intégration HTML/CSS/JS</li>
+            <li>Tests & optimisation</li>
+          </ul>
+        </div>
+
+        <aside class="contact-card fade">
+          <h3>Contact</h3>
+          <form id="contactForm" onsubmit="return handleContact(event)">
+            <input type="text" id="name" placeholder="Ton nom" required />
+            <input type="email" id="email" placeholder="Ton email" required />
+            <textarea id="message" rows="4" placeholder="Message"></textarea>
+            <button type="submit">Envoyer</button>
+            <div class="small muted" style="margin-top:8px">(Le formulaire ouvrira un email, car ceci est un site statique.)</div>
+          </form>
+        </aside>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="small muted">© </span> KINTOSSOU Duc-Martin — <a href="#contact">+228 91499340</a> • <a href="#projets">Projets</a></div>
+    </footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const subject = encodeURIComponent('Contact depuis portfolio - ' + name);
+      const body = encodeURIComponent('Nom: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      window.location.href = `mailto:ton.email@example.com?subject=${subject}&body=${body}`;
+      return false;
+    }
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    });
+
+    // small lazy load for projects (simple)
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.fade').forEach((el, i) => {
+        el.style.animationDelay = (i * 80) + 'ms';
+      });
+    });
+  </script>
+</body>
+</html>
